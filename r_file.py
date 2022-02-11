@@ -1,3 +1,7 @@
+import json
+from pprint import pprint
+
+
 def cookbook():
     cook_book = {}
     a = []
@@ -23,5 +27,8 @@ def get_shop_list_by_dishes(dishes, person_count):
     return shop_list
 
 
-print(cookbook())
-print(get_shop_list_by_dishes(['Омлет', 'Утка по-пекински', 'Омлет'], 2))
+cook_json = json.dumps(cookbook(), ensure_ascii=False, indent=4)
+print(cook_json)
+print()
+pprint(get_shop_list_by_dishes(['Омлет', 'Утка по-пекински', 'Омлет'], 2))
+
